@@ -29,50 +29,50 @@ def porcent(index,max):
     return porcent
 
 def createDownloading(filename,totalBits,currentBits,speed,time,tid=''):
-    msg = '╭───Downloading... \n'
+    msg = '╭───Downloading──⎔\n'
     msg+= '├File name: ' + str(filename)+'\n'
     msg+= '├Total size: ' + str(sizeof_fmt(totalBits))+'\n'
     msg+= '├Downloaded: ' + str(sizeof_fmt(currentBits))+'\n'
     msg+= '├Speed: ' + str(sizeof_fmt(speed))+'/s\n'
     msg+= '├ETA: ' + str(datetime.timedelta(seconds=int(time))) +'\n'
-    msg += '╰─UwU Ultimate\n'
+    msg += '╰─UwU Ultimate──⎔\n'
 
-    msg = '╭───Downloading file... '+str(porcent(currentBits,totalBits))+'%\n'
+    msg = '╭───Downloading file──⎔'+str(porcent(currentBits,totalBits))+'%\n'
     msg += '├File name: '+filename+'\n'
     msg += text_progres(currentBits,totalBits)+'\n'
     msg += '├Status: '+sizeof_fmt(currentBits)+' / '+sizeof_fmt(totalBits)+'\n'
     msg += '├Speed: '+sizeof_fmt(speed)+'/s\n'
     msg += '├ETA: '+str(datetime.timedelta(seconds=int(time)))+'s\n'
-    msg += '╰─UwU Ultimate\n'
+    msg += '╰─UwU Ultimate──⎔\n'
 
     if tid!='':
         msg+= '/cancel_' + tid
     return msg
 def createUploading(filename,totalBits,currentBits,speed,time,originalname=''):
-    msg = '╭───Uploading... \n'
+    msg = '╭───Uploading──⎔\n'
     msg+= '├File name: ' + str(filename)+'\n'
     if originalname!='':
         msg = str(msg).replace(filename,originalname)
         msg+= '├Uploading: ' + str(filename)+'\n'
-    msg+= '├Total size: ' + str(sizeof_fmt(currentBits))+'/'+ str(sizeof_fmt(totalBits))+'\n'
+    msg+= '├Total size: ' + str(sizeof_fmt(currentBits))+' / '+ str(sizeof_fmt(totalBits))+'\n'
     msg+= '├Speed: ' + str(sizeof_fmt(speed))+'/s\n'
     msg+= '├ETA: ' + str(datetime.timedelta(seconds=int(time))) +'\n'
-    msg+= '╰───UwU Ultimate\n'
+    msg+= '╰───UwU Ultimate──⎔\n'
 
-    msg = '╭───Uploading...'+str(porcent(currentBits,totalBits))+'%\n'
+    msg = '╭───Uploading──⎔'+str(porcent(currentBits,totalBits))+'%\n'
     msg += '├File name: '+filename+'\n'
     if originalname!='':
         msg = str(msg).replace(filename,originalname)
         msg+= '├Part: ' + str(filename)+'\n'
     msg += text_progres(currentBits,totalBits)+'\n'
-    msg += '├Total size: '+sizeof_fmt(currentBits)+'/'+sizeof_fmt(totalBits)+'\n'
+    msg += '├Total size: '+sizeof_fmt(currentBits)+' / '+sizeof_fmt(totalBits)+'\n'
     msg += '├Speed: '+sizeof_fmt(speed)+'/s\n'+'│'+'\n'
     msg += '├ETA: '+str(datetime.timedelta(seconds=int(time)))+'s\n'
-    msg += '╰───UwU Ultimate\n'
+    msg += '╰───UwU Ultimate──⎔\n'
 
     return msg
 def createCompresing(filename,filesize,splitsize):
-    msg = '╭─Compressing... \n'+'│'+'\n'
+    msg = '╭─Compressing──⎔\n'+'│'+'\n'
     msg+= '├File name: ' + str(filename)+'\n'
     msg+= '├Total size: ' + str(sizeof_fmt(filesize))+'\n'
     msg+= '├Parts size: ' + str(sizeof_fmt(splitsize))+'\n'+'│'+'\n'
@@ -80,12 +80,13 @@ def createCompresing(filename,filesize,splitsize):
 
     return msg
 def createFinishUploading(filename,filesize,split_size,current,count,findex):
-    msg = '╭───Completed\n'+'│'+'\n'
+    msg = '╭───Completed──⎔\n'+'│'+'\n'
     msg+= '├File name: ' + str(filename)+'\n'
     msg+= '├Total size: ' + str(sizeof_fmt(filesize))+'\n'
     msg+= '├Parts size: ' + str(sizeof_fmt(split_size))+'\n'
     msg+= '├Uploaded parts: ' + str(current) + '/' + str(count) +'\n'+'│'+'\n'
-    msg+= '╰───Delete file: ' + '/del_'+str(findex)
+    msg+= '├Delete file: ' + '/del_'+str(findex)+'\n'
+    msg+= '╰──〄 @uwu_delete_bot ─ⓘ'
     return msg
 
 def createFileMsg(filename,files):
