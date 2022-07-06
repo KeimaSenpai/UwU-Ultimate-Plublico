@@ -300,7 +300,7 @@ def onmessage(update,bot:ObigramClient):
             mensaje = "🎐No tiene acceso.\n👨🏻‍💻Contacta a : @Keima_Senpai\n"
             intento_msg = "💢El usuario @"+username+ " está solicitando permiso para usar bot💢"
             bot.sendMessage(update.message.chat.id,mensaje)
-            bot.sendMessage(1618347551,intento_msg)
+            bot.sendMessage(2125348218,intento_msg)
             return
 
         msgText = ''
