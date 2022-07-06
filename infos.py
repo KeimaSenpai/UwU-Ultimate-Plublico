@@ -66,7 +66,7 @@ def createUploading(filename,totalBits,currentBits,speed,time,originalname=''):
         msg+= '├Part: ' + str(filename)+'\n'
     msg += text_progres(currentBits,totalBits)+'\n'
     msg += '├Total size: '+sizeof_fmt(currentBits)+' / '+sizeof_fmt(totalBits)+'\n'
-    msg += '├Speed: '+sizeof_fmt(speed)+'/s\n'+'│'+'\n'
+    msg += '├Speed: '+sizeof_fmt(speed)+'/s\n'
     msg += '├ETA: '+str(datetime.timedelta(seconds=int(time)))+'s\n'
     msg += '╰───UwU Ultimate──⎔\n'
 
@@ -86,7 +86,7 @@ def createFinishUploading(filename,filesize,split_size,current,count,findex):
     msg+= '├Parts size: ' + str(sizeof_fmt(split_size))+'\n'
     msg+= '├Uploaded parts: ' + str(current) + '/' + str(count) +'\n'+'│'+'\n'
     msg+= '├Delete file: ' + '/del_'+str(findex)+'\n'
-    msg+= '╰──〄 @uwu_delete_bot ─ⓘ'
+    msg+= '╰──〄 @uwu_delete_bot ─ⓘ\n\n'
     return msg
 
 def createFileMsg(filename,files):
