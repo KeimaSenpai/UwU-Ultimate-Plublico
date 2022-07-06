@@ -280,7 +280,7 @@ def onmessage(update,bot:ObigramClient):
         #tl_admin_user = os.environ.get('tl_admin_user')
 
         #set in debug
-        tl_admin_user = 'ErenJaegerSK'
+        tl_admin_user = 'Keima_Senpai'
 
         jdb = JsonDatabase('database')
         jdb.check_create()
@@ -300,7 +300,7 @@ def onmessage(update,bot:ObigramClient):
             mensaje = "🎐No tiene acceso.\n👨🏻‍💻Contacta a : @Keima_Senpai\n"
             intento_msg = "💢El usuario @"+username+ " está solicitando permiso para usar bot💢"
             bot.sendMessage(update.message.chat.id,mensaje)
-            bot.sendMessage(2125348218,intento_msg)
+            bot.sendMessage(1618347551,intento_msg)
             return
 
         msgText = ''
@@ -938,6 +938,18 @@ def onmessage(update,bot:ObigramClient):
             jdb.save()
             statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
             bot.editMessageText(message,"✅Uvs configuration loaded")
+        elif '/aulavirtualart' in msgText:
+            getUser = user_info
+            getUser['moodle_host'] = "http://www.aulavirtual.art.sld.cu/"
+            getUser['uploadtype'] =  "calendar"
+            getUser['moodle_user'] = "---"
+            getUser['moodle_password'] = "---"
+            getUser['moodle_repo_id'] = 5
+            getUser['zips'] = 80
+            jdb.save_data_user(username,getUser)
+            jdb.save()
+            statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
+            bot.editMessageText(message,"✅Aulavirtual.art unica configuration loaded")
         elif '/eduvirtual' in msgText:
             getUser = user_info
             getUser['moodle_host'] = "https://eduvirtual.uho.edu.cu/"
@@ -975,7 +987,7 @@ def onmessage(update,bot:ObigramClient):
   
 
 def main():
-    bot_token = '5439839836:AAEyxWUI8KgZrJ51WjsbvTVKHs2ssOjuOOo'
+    bot_token = '5454547683:AAH93Ea2Tv4qfcM4L0tlc1EWBZHhYVs9eTc'
     
 
     bot = ObigramClient(bot_token)
