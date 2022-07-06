@@ -1,4 +1,3 @@
-INFORMACIÓN
 ________________(✪)________________
 📦Versión 1.3.7 Release (2022/6/30)
 
@@ -11,6 +10,6 @@ ________________(✪)________________
 ________________(✪)________________
 /ismm
 /uvs
+/aulavirtualart
 
-Para eliminar archivos es /delete y el link al lado
-/delete Url
+Para eliminar archivos subidos manden el txt al bot @uwu_delete_bot
