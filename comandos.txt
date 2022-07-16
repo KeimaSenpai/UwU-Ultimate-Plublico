@@ -14,6 +14,7 @@ cloud - Tipo de nube (moodle o cloud)
 dir - Carpeta destino de la cloud
 uptype - Tipo de subida a moodles (evidence, draft, blog, calendar)
 files - Archivos de la nube
+delete - Eliminado de archivos draft
 proxy - Equipar proxy
 off_proxy - Desequipar proxy
 cript - Encriptar proxy
@@ -21,5 +22,4 @@ decript - Desencriptar proxy
 view_proxy - Ver proxy actual
 encript_on - Encriptar enlaces de descarga
 encript_off - No Encriptar enlaces de descarga
-delete - Elimina completamente el archivo de la nube
 about - Información sobre el bot
