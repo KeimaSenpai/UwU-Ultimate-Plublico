@@ -473,6 +473,12 @@ def onmessage(update,bot:ObigramClient):
             bot.sendMessage(update.message.chat.id,información.read())
             información.close()
             return
+        if '/auto' in msgText:
+            message = bot.sendMessage(update.message.chat.id,'☁')
+            nube = open('nube.txt','r')
+            bot.sendMessage(update.message.chat.id,nube.read())
+            información.close()
+            return
         if '/commands' in msgText:
             message = bot.sendMessage(update.message.chat.id,'📄/setcommands to @BotFather')
             comandos = open('comandos.txt','r')
