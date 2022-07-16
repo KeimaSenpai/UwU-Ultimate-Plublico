@@ -12,12 +12,12 @@ def text_progres(index,max):
 		porcent = round(porcent)
 		make_text = ''
 		index_make = 1
-		make_text += '\n['
+		make_text += '\n│'
 		while(index_make<20):
-			if porcent >= index_make * 5: make_text+= '■'
-			else: make_text+= '□'
+			if porcent >= index_make * 5: make_text+= '⬢'
+			else: make_text+= '⬡'
 			index_make+=1
-		make_text += ']\n'
+		make_text += ''
 		return make_text
 	except Exception as ex:
 			return ''
@@ -35,7 +35,6 @@ def createDownloading(filename,totalBits,currentBits,speed,time,tid=''):
     msg+= '├Downloaded: ' + str(sizeof_fmt(currentBits))+'\n'
     msg+= '├Speed: ' + str(sizeof_fmt(speed))+'/s\n'
     msg+= '├ETA: ' + str(datetime.timedelta(seconds=int(time))) +'\n'
-    msg += '╰─UwU Ultimate──⎔\n'
 
     msg = '╭───Downloading file──⎔'+str(porcent(currentBits,totalBits))+'%\n'
     msg += '├File name: '+filename+'\n'
@@ -43,10 +42,9 @@ def createDownloading(filename,totalBits,currentBits,speed,time,tid=''):
     msg += '├Status: '+sizeof_fmt(currentBits)+' / '+sizeof_fmt(totalBits)+'\n'
     msg += '├Speed: '+sizeof_fmt(speed)+'/s\n'
     msg += '├ETA: '+str(datetime.timedelta(seconds=int(time)))+'s\n'
-    msg += '╰─UwU Ultimate──⎔\n'
 
     if tid!='':
-        msg+= '/cancel_' + tid
+        msg+= '╰─/cancel_' + tid
     return msg
 def createUploading(filename,totalBits,currentBits,speed,time,originalname=''):
     msg = '╭───Uploading──⎔\n'
@@ -75,7 +73,7 @@ def createCompresing(filename,filesize,splitsize):
     msg = '╭─Compressing──⎔\n'+'│'+'\n'
     msg+= '├File name: ' + str(filename)+'\n'
     msg+= '├Total size: ' + str(sizeof_fmt(filesize))+'\n'
-    msg+= '├Parts size: ' + str(sizeof_fmt(splitsize))+'\n'+'│'+'\n'
+    msg+= '├Parts size: ' + str(sizeof_fmt(splitsize))+'\n'
     msg+= '╰─Amount of parts: ' + str(round(int(filesize/splitsize)+1,1))+'\n\n'
 
     return msg
