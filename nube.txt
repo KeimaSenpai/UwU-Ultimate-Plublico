@@ -8,8 +8,10 @@
 ├/aulacened
 ├/eduvirtual
 ├────────────⎔
-├/ismm
 ├/uvs
+├/ismm
+├/reduc_edu
 ├────────────⎔
+├
 ├/aula_uclv
 ╰─────────────────ⓘ
