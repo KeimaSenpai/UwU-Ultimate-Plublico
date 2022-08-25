@@ -12,6 +12,6 @@
 ├/ismm
 ├/reduc_edu
 ├────────────⎔
-├
 ├/aula_uclv
+├/cursad_joven
 ╰─────────────────ⓘ
