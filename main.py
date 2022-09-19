@@ -961,14 +961,26 @@ def onmessage(update,bot:ObigramClient):
             getUser = user_info
             getUser['moodle_host'] = "https://uvs.ucm.cmw.sld.cu/"
             getUser['uploadtype'] =  "draft"
-            getUser['moodle_user'] = "barck"
-            getUser['moodle_password'] = "030322Df@"
+            getUser['moodle_user'] = ""
+            getUser['moodle_password'] = ""
             getUser['moodle_repo_id'] = 5
             getUser['zips'] = 25
             jdb.save_data_user(username,getUser)
             jdb.save()
             statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
             bot.editMessageText(message,"✅Uvs configuration loaded\nhttps://uvs.ucm.cmw.sld.cu/")
+        elif '/ucmc_cfg' in msgText:
+            getUser = user_info
+            getUser['moodle_host'] = "http://www.ucmc.cfg.sld.cu/"
+            getUser['uploadtype'] =  "calendar"
+            getUser['moodle_user'] = "---"
+            getUser['moodle_password'] = "---"
+            getUser['moodle_repo_id'] = 11
+            getUser['zips'] = 9
+            jdb.save_data_user(username,getUser)
+            jdb.save()
+            statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
+            bot.editMessageText(message,"✅Aula Uclv configuration loaded\n http://www.ucmc.cfg.sld.cu/")
         elif '/reduc_edu' in msgText:
             getUser = user_info
             getUser['moodle_host'] = "https://moodle.reduc.edu.cu/"

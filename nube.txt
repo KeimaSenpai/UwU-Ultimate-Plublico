@@ -10,6 +10,7 @@
 ├────────────⎔
 ├/uvs
 ├/ismm
+├/ucmc_cfg
 ├/reduc_edu
 ├────────────⎔
 ├/aula_uclv
