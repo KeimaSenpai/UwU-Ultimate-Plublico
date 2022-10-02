@@ -912,11 +912,11 @@ def onmessage(update,bot:ObigramClient):
         elif '/evea' in msgText:
             getUser = user_info
             getUser['moodle_host'] = "https://evea.uh.cu/"
-            getUser['uploadtype'] =  "draft"
+            getUser['uploadtype'] =  "calendar"
             getUser['moodle_user'] = "---"
             getUser['moodle_password'] = "---"
             getUser['moodle_repo_id'] = 4
-            getUser['zips'] = 100
+            getUser['zips'] = 94
             jdb.save_data_user(username,getUser)
             jdb.save()
             statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
