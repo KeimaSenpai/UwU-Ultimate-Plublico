@@ -1,7 +1,6 @@
 ╭─Nubes autoconfiguracíon─〄
 │
 ├/eva
-├/evea
 ├/uclv
 ├/cursos
 ├/posgrado
@@ -9,6 +8,7 @@
 ├/eduvirtual
 ├────────────⎔
 ├/uvs
+├/evea
 ├/ismm
 ├/ucmc_cfg
 ├/reduc_edu
