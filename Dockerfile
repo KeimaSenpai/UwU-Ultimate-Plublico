@@ -1,8 +1,12 @@
 FROM python:3.11.0
 
-RUN apt-get update && apt-get install --yes pipenv
-WORKDIR /usr/src/app
+RUN pip install --update pip \
+    && mkdir /app
 
-COPY ./ /usr/src/app/
-RUN pipenv install --deploy --ignore-pipfile
-CMD pipenv run python main.py
+ADD . /app
+
+WORKDIR /app
+
+RUN pip install -r requirements.txt
+
+CMD python /app/main.py 
